@@ -52,14 +52,21 @@ const lists = [
 
 
 for (let i = 0; i < lists.length; i++){
-    
+    // for文の中で配列の要素それぞれを利用するのは頻出パターン
 
+    // const name = lists[i].name;
+    // const img = lists[i].img;
+    // const price = lists[i].price;
+
+    // オブジェクトのキーと同じ名前の変数を作りたいときは、
+    // 分割代入が利用できる
+    const { name, img, price } = lists[i]
 
     const content = `
     <div>
-        <img src="images/${lists[i].img}" alt="">
-        <h2>${lists[i].name}</h2>
-        <p>${lists[i].price}円</p>
+        <img src="images/${img}" alt="">
+        <h2>${name}</h2>
+        <p>${price}円</p>
     </div>
     `
     menu.insertAdjacentHTML('beforeend', content)
