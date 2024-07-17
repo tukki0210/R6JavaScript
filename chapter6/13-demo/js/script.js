@@ -1,12 +1,12 @@
 // １.監視ロボットに、してほしい内容
 // 監視対象が範囲内に現れたら実行する内容
-const showKirin = (entries) => {
+const showKirin = (ent) => {
   // 設定データの配列
-  console.log(entries)
+  // console.log(entries)
   // 配列の０番に入っているオブジェクト
-  console.log(entries[0])
+  // console.log(entries[0])
   // オブジェクトが持つtarget要素
-  console.log(entries[0].target)
+  console.log(ent[0].target)
 
   const keyframes = {
     opacity: [0,1],
@@ -14,7 +14,7 @@ const showKirin = (entries) => {
     rotate: ['3600deg',0]
   };
   
-  entries[0].target.animate(keyframes, 600)
+  ent[0].target.animate(keyframes, 600)
 }
 
 // ２.新しい名前をつけて監視ロボットを導入する
